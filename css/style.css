@@ -18,3 +18,81 @@ body{
 .menu.show{
   display: flex;
 }
+
+.modal-open{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  width: 300px;
+  height: 60px;
+  color: #fff;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  translate: -50% -50%;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 50%);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  box-sizing: border-box;
+}
+
+.modal:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin-left: -0.2em;
+}
+
+.modal.is-active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal-close{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-content{
+  background: #fff;
+  text-align: left;
+  line-height: 1.8;
+  padding: 20px;
+}
+
+.modal-content p{
+  margin: 1em 0;
+}
