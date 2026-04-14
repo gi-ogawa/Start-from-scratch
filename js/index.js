@@ -1,23 +1,30 @@
+//メニューボタン 
+
+// 要素を取得
 const btn =
 document.getElementById("menuBtn");
 const menu =
 document.getElementById("menu");
 
+// ボタン押した時にmenuのクラスにshowをつけ外しする
 btn.addEventListener("click",() =>
 {
   menu.classList.toggle("show");
 });
-
+// モーダル
+// 最初に取得したタグにのみ反映
 const modal = document.querySelector('.js-modal'),
       open = document.querySelector('.js-modal-open'),
       close = document.querySelector('.js-modal-close');
 
+//隠してた文字を出す
 function modalOpen(){
   modal.classList.add('is-active');
 }
+//クリックした後表示させるコード
 open.addEventListener('click',modalOpen);
 
-
+//クリックした後消すコード
 function modalClose(){
   modal.classList.remove('is-active');
   
@@ -30,7 +37,7 @@ function modalOut(e){
   }
 }
 addEventListener('click',modalOut);
-
+// スライドショー
 
 const images = document.querySelectorAll('img');
 const navContainer = document.querySelector('.nav-container');
@@ -40,7 +47,7 @@ let interval;
 const button = document.createElement('button');
 button.classList.add('nav-btn');
 navContainer.appendChild(button);
-for (let i = 0; i < totalImages; i++){
+for (let i = 0; i < totalImages - 1; i++){
   const button = document.createElement('button');
   button.classList.add('nav-btn');
   navContainer.appendChild(button);

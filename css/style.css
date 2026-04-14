@@ -80,6 +80,7 @@ body{
   vertical-align: middle;
   max-width: 600px;
   width: 90%;
+  top: -30%;
 }
 
 .modal-close{
