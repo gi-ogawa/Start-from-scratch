@@ -1,0 +1,175 @@
+body{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #454545;
+}
+
+.menu-btn{
+  font-size: 24px;
+  background: none;
+  cursor: pointer;
+}
+
+.menu{
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.neko{
+  text-decoration: none;
+  color: #000;
+}
+
+.menu.show{
+  display: flex;
+}
+
+.modal-open{
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  width: 300px;
+  height: 60px;
+  color: #fff;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  translate: -50% -50%;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 50%);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  box-sizing: border-box;
+}
+
+.modal:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin-left: -0.2em;
+}
+
+.modal.is-active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 600px;
+  width: 90%;
+  top: -30%;
+}
+
+.modal-close{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-content{
+  background: #fff;
+  text-align: left;
+  line-height: 1.8;
+  padding: 20px;
+}
+
+.modal-content p{
+  margin: 1em 0;
+}
+
+.slider-container{
+  position: relative;
+  display: flex;
+  width: 800px;
+  height: 500px;
+  border: 5px solid lightgray;
+  top: 55%;
+  left: 20%;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+img.image-active{
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.nav-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.nav-btn{
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin: 10px;
+  background-color: #0d7df5;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-btn.btn-active{
+  background-color: #f99f3e;
+}
+
+.nav-btn:hover{
+  box-shadow: 0 0 5px 3px white;
+}
