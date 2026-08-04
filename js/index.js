@@ -38,7 +38,7 @@ function modalOut(e){
 }
 addEventListener('click',modalOut);
 // スライドショー
-
+//画像を取得し枚数を数えそれを画面に表示しボタンで画像を変える
 const images = document.querySelectorAll('img');
 const navContainer = document.querySelector('.nav-container');
 const totalImages = images.length
